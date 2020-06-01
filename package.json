@@ -1,0 +1,22 @@
+{
+  "name": "sanatesti",
+  "version": "1.0.0",
+  "description": "Suomenkielen sanatesti",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Victor00000000/Sanatesti.git"
+  },
+  "author": "Viktor Haimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Victor00000000/Sanatesti/issues"
+  },
+  "homepage": "https://github.com/Victor00000000/Sanatesti#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
