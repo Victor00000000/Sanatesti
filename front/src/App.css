@@ -1,0 +1,30 @@
+.game-container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.info {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.word {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(96, 240, 96);
+}
