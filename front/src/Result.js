@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Answer from './Answer'
+import { QuestionsContext } from './Context'
 
-function Result({ data, setShow }) {
-  const answerArray = data.map((word, i) => <Answer key={i} word={word} />)
+function Result({ setShow }) {
+  const data = useContext(QuestionsContext)
+
+  const answerArray = data.questions.map((word, i) => (
+    <Answer key={i} word={word} />
+  ))
   let oikeinArvattuja = 0
-  data.forEach((word) => {
+  data.questions.forEach((word) => {
     if (
       (word.Oikea === '1' && word.vastaus === true) ||
       (word.Oikea === '2' && word.vastaus === false)
@@ -14,11 +19,15 @@ function Result({ data, setShow }) {
   })
 
   return (
-    <div className={'game-container'}>
+    <div className={'container center'}>
       <h1>Vastaukset</h1>
-      {answerArray}
-      <p>Sait {((oikeinArvattuja / data.length) * 100).toFixed(2)}% oikein</p>
+      <div className={'word-container'}>{answerArray}</div>
+      <p className={'conclusion'}>
+        Sait {((oikeinArvattuja / data.questions.length) * 100).toFixed(2)}%
+        oikein
+      </p>
       <button
+        className={'button'}
         onClick={() => {
           setShow('select')
         }}
